@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug (ts-node)",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "args": ["src/index.ts", "--log", "${workspaceFolder}/data/apache_log.txt"],
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "GEOIP_DB": "${workspaceFolder}/data/GeoLite2-Country.mmdb",
+        "OUTPUT_FORMAT": "text"
+      },
+      "sourceMaps": true,
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**", "node_modules/**"]
+    }
+  ]
+}
